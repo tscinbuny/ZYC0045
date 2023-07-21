@@ -13,4 +13,3 @@ This tutorial includes the file content shown in the figure below to help you le
 "**2_Arduino_Code**": This folder is used to store Arduino code files, upload the codes to the control board for use, each code function is independent, each time a code is uploaded, the code uploaded later will overwrite the previous code;
 
 "**3_References**":This folder contains reference files related to the kit to help you better understand how the product works.
-cd
