@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYC0106 Documentation</title>
+    <style>
+        /* CSS 样式 */
+    </style>
+</head>
+<body>
+    <h1>Project Documentation</h1>
+    <button id="switchBtn">Switch Language</button>
+    <div id="docContainer">
+        <!-- 这里放置文档内容 -->
+        <iframe id="docFrame" src="en-doc.html" frameborder="0"></iframe>
+    </div>
+    
+    <script>
+        const switchBtn = document.getElementById('switchBtn');
+        const docContainer = document.getElementById('docContainer');
+
+        let lang = 'en'; // 默认语言为英文
+
+        switchBtn.addEventListener('click', () => {
+            // 切换语言，更新文档内容
+            lang = lang === 'en' ? 'zh' : 'en';
+            updateDocContent(lang);
+        });
+
+        function updateDocContent(lang) {
+            // 更新文档内容
+            const contentUrl = lang === 'en' ? 'en-doc.html' : 'zh-doc.html';
+            docFrame.src = contentUrl;
+        }
+
+        // 页面加载时初始化文档内容
+        updateDocContent(lang);
+    </script>
+</body>
+</html>
